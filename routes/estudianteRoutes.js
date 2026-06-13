@@ -14,11 +14,11 @@ const estudianteController = require('../controllers/estudianteController');
 router.get('/',estudianteController.obtenerTodos);
 
 // ───────────────────────────────────────────────────────────
-// GET /estudiantes → Listar todos los estudiantes
+// GET /api/estudiantes → Listar todos los estudiantes
 // ───────────────────────────────────────────────────────────
 /**
  * @swagger
- * /estudiantes:
+ * /api/estudiantes:
  *   get:
  *     summary: Listar todos los estudiantes
  *     description: Obtiene la lista completa de estudiantes ordenados por fecha de creación (más recientes primero).
@@ -45,11 +45,11 @@ router.get('/',estudianteController.obtenerTodos);
 router.get('/', estudianteController.obtenerTodos);
 
 // ───────────────────────────────────────────────────────────
-// GET /estudiantes/{id} → Obtener estudiante por ID
+// GET /api/estudiantes/{id} → Obtener estudiante por ID
 // ───────────────────────────────────────────────────────────
 /**
  * @swagger
- * /estudiantes/{id}:
+ * /api/estudiantes/{id}:
  *   get:
  *     summary: Obtener un estudiante por ID
  *     description: Busca un estudiante específico mediante su ID numérico.
@@ -94,7 +94,7 @@ router.get('/:id',estudianteController.obtenerPorId);
 // ───────────────────────────────────────────────────────────
 /**
  * @swagger
- * /estudiantes:
+ * /api/estudiantes:
  *   post:
  *     summary: Crear un nuevo estudiante
  *     description: Registra un nuevo estudiante en la base de datos. El email debe ser único.
@@ -156,11 +156,11 @@ router.get('/:id',estudianteController.obtenerPorId);
 router.post('/',estudianteController.crear);
 
 // ───────────────────────────────────────────────────────────
-// PUT /estudiantes/{id} → Actualizar estudiante
+// PUT /api/estudiantes/{id} → Actualizar estudiante
 // ───────────────────────────────────────────────────────────
 /**
  * @swagger
- * /estudiantes/{id}:
+ * /api/estudiantes/{id}:
  *   put:
  *     summary: Actualizar un estudiante completo
  *     description: Modifica todos los campos de un estudiante existente. Se requieren todos los campos obligatorios.
@@ -203,11 +203,11 @@ router.post('/',estudianteController.crear);
 router.put('/:id',estudianteController.actualizar);
 
 // ───────────────────────────────────────────────────────────
-// DELETE /estudiantes/{id} → Eliminar estudiante
+// DELETE /api/estudiantes/{id} → Eliminar estudiante
 // ───────────────────────────────────────────────────────────
 /**
  * @swagger
- * /estudiantes/{id}:
+ * /api/estudiantes/{id}:
  *   delete:
  *     summary: Eliminar un estudiante
  *     description: Elimina permanentemente un estudiante de la base de datos.
